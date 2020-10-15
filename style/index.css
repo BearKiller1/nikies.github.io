@@ -1,0 +1,153 @@
+body{
+  margin:0;
+  background:#F7F7F7;
+}
+body a,body img{
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+nav{
+  user-select: none;
+  font-family: "Allan";
+  letter-spacing: 3px;
+  background: #333;
+  color:white;
+  min-height:10vh;
+  display: grid;
+  grid-template-columns:10%  10% 10% 10% 10%  20%  20% 10%;
+  align-items: center;
+}
+nav a{
+  text-align: center;
+  font-size:1.3vw;
+  text-decoration: none;
+    transition:0.5s;
+}
+nav a:hover{
+  transition:0.5s;
+  color:#D0D0D0;
+}
+
+nav img{
+  transition: 1s;
+  cursor: pointer;
+  border-radius: 100%;
+  width:37%;
+  margin:0 0 0 25%;
+  height:8vh;
+  animation: spinny 0.3s ;
+  animation-iteration-count: 4;
+  animation-timing-function: linear;
+}
+@keyframes spinny {
+  from{transform: rotate(0deg);}
+  from{transform: rotate(360deg);}
+}
+
+.user{
+  font-size:1.3vw;
+  cursor: pointer;
+  grid-column: 7/7;
+}
+.login:hover,nav img:hover{
+  transition: 1s;
+  transform: rotate(360deg);
+}
+.login{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  grid-column: 8/8;
+}
+
+section {
+  display: flex;
+  height:50vh;
+  justify-content: center;
+  align-items: center;
+}
+.page{
+  width:100%;
+  height: 50vh;
+}
+.page img{
+  cursor: pointer;
+  width:100%;
+  height:100%;
+}
+
+.hi-slide { position: relative; width: 60%; height: 50vh; margin:10% auto 10% 20%;}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev
+            { position: absolute;
+              top: 50%;
+              width: 4%;
+              height: 40px;
+              margin-top: -20px;
+                border-radius: 50px;
+              line-height: 40px;
+              text-align: center;
+              cursor: pointer;
+              background-color: #fff;
+              color: black;
+              transition: all 0.6s;
+              font-size: 20px;
+                font-weight: bold;
+            }
+           .hi-slide .hi-next:hover,
+            .hi-slide .hi-prev:hover
+            {
+            opacity: 1;
+            background-color: #fff;
+            }
+
+           .hi-slide .hi-prev { left: -60px; }
+
+    .hi-slide .hi-prev::before { content: '<'; }
+    .hi-slide .hi-next { right: -60px; }
+    .hi-slide .hi-next::before { content: '>'; }
+
+            .hi-slide > ul
+                    {
+                        list-style: none;
+                        position: relative;
+                        width: 100%;
+                        height: 50vh;
+                        margin: 0;
+                        padding: 0;
+            }
+
+
+        .hi-slide > ul > li {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            left: 70%;
+            top: 5%;
+            width: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 3px solid #fff;
+            background-color: #333;
+            cursor: pointer; }
+
+        .hi-slide > ul > li > img { width: 100%; height: 100%; background-position: center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
